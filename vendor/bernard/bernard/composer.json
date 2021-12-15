@@ -1,0 +1,37 @@
+{
+    "name"        : "bernard/bernard",
+    "description" : "Message queue implemented in PHP with Redis as a backend.",
+    "license"     : "MIT",
+
+    "autoload" : {
+        "psr-0" : { "Bernard" : "src/" },
+        "files" : ["src/Bernard/functions.php"]
+    },
+
+    "require" : {
+        "php" : ">=5.3.3"
+    },
+
+    "replace" : {
+        "henrikbjorn/bernard" : "self.version"
+    },
+
+    "require-dev" : {
+        "psr/log"                      : "~1.0",
+        "jms/serializer"               : "~0.12",
+        "pimple/pimple"                : "~1.0",
+        "predis/predis"                : "~0.8",
+        "symfony/console"              : "~2.0",
+        "symfony/dependency-injection" : "~2.0",
+        "symfony/serializer"           : "~2.2",
+        "doctrine/dbal"                : "~2.3",
+        "iron-io/iron_mq"              : "~1.4",
+        "aws/aws-sdk-php"              : "~2.4"
+    },
+
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "0.10.x-dev"
+        }
+    }
+}

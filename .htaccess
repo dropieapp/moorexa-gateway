@@ -1,0 +1,22 @@
+# add rules if mod_rewrite module is avaliable
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+# it gets safe here.
+<IfModule mod_headers.c>
+
+  <FilesMatch "(composer.json|composer.lock|composer)">
+	  Deny from all
+  </FilesMatch>
+
+</IfModule>
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# it gets beautiful here. Please maintain endpoint. 
+RewriteRule ^(.+)$ index.php?endpoint=$1 [QSA,L]
+
+</IfModule>

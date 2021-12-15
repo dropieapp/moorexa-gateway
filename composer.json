@@ -1,0 +1,11 @@
+{
+    "require": {
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-pdo": "*",
+        "monolog/monolog": "^1.25",
+        "guzzlehttp/guzzle": "~6.0",
+        "rmccue/requests": "^1.7",
+        "cboden/ratchet": "^0.4.2"
+    }
+}
